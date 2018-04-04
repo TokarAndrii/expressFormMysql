@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Chicle', cursive;
+    font-size: 105%;
+}
+
+.row{
+    text-align: left;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label{
+    display: inline-block;
+    margin-right: 120px;
+    width: 150px;
+}
+
+input, textarea{
+    text-align: left;
+    padding-left: 5px;
+    display: inline-block;
+    width: 400px;
+}
+
+.textHolder {
+    display: inline-block;
+    width: 50%;
+}
+
+.textHolder__title,input,textarea {
+    margin: 1rem;
+}
+
+.textHolder__txt {
+    width: 50rem;
+
+}
+
+input[type='submit']{
+    text-align: center;
+}
+
