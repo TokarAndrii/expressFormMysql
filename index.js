@@ -28,7 +28,7 @@ app.use(require('connect-livereload')({
 app.listen(3001);
 
 app.get('/', function (req, res) {
-    res.render('index', {title: 'Express2'});
+    res.render('index', {title: 'Express'});
 
 });
 
@@ -39,7 +39,8 @@ app.post('/', upload.array(), function (req, res, next) {
         if (err) throw err;
         console.log('You are now connected...');
 
-        connection.query('CREATE TABLE IF NOT EXISTS users(id int primary key NOT NULL AUTO_INCREMENT, name varchar(255),email varchar(255), tel varchar(255), message text)', function (err, result) {
+        connection.query('CREATE TABLE IF NOT EXISTS users(id int primary key NOT NULL AUTO_INCREMENT, name varchar(255),email varchar(255), tel varchar(255), message text)',
+            function (err, result) {
             if (err) throw err;
             connection.query('INSERT INTO users (name, email,tel, message) VALUES (?, ?, ?, ?)', [req.body.name, req.body.email, req.body.tel, req.body.message],
                 function (err, result) {
