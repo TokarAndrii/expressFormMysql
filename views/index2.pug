@@ -1,0 +1,26 @@
+html
+    head
+        link(rel='stylesheet', href='/bootstrap.css')
+        link(rel='stylesheet', href='/bootstrap-theme.css')
+        link(rel='stylesheet', href='/style.css')
+        link(href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet")
+        title!= title
+    body
+        div.textHolder
+            h2.textHolder__title Подать Заявку
+            p.textHolder__txt   Заполните форму, чтобы записаться на консультацию – это первый шаг к зачислению в школу. Количество мест ограничено
+        form(method="post" enctype="multipart/form-data" action="/")
+            div.row
+                label(for='name') Имя
+                input#name(type='text' name='name' value='tokar andrii')
+            div.row
+                label Телефон
+                input#tel(type='tel' name='tel' value='0973958738')
+            div.row
+                label(for='email') E-mail
+                input#email(type='email' name='email' value='tokar.andrii@gmail.com')
+            div.row
+                label(for='message') Сообщение
+                textarea#message(cols="40" rows="6" name='message') this is my message!
+            input(type="submit" value='Подать заявку')
+

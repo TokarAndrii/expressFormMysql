@@ -1,24 +1,58 @@
 html
-    head
-        link(rel='stylesheet', href='/style.css')
-        link(href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet")
-        title!= title
+head
+    link(rel='stylesheet', href='/bootstrap.css')
+    link(rel='stylesheet', href='/bootstrap-theme.css')
+    link(rel='stylesheet', href='/mainStyle.css')
+    link(href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet")
+    title!= title
     body
-        div.textHolder
-            h2.textHolder__title Подать Заявку
-            p.textHolder__txt   Заполните форму, чтобы записаться на консультацию – это первый шаг к зачислению в школу. Количество мест ограничено
-        form(method="post" enctype="multipart/form-data" action="/")
-            div.row
-                label(for='name') Имя
-                input#name(type='text' name='name' value='tokar andrii')
-            div.row
-                label Телефон
-                input#tel(type='tel' name='tel' value='0973958738')
-            div.row
-                label(for='email') E-mail
-                input#email(type='email' name='email' value='tokar.andrii@gmail.com')
-            div.row
-                label(for='message') Сообщение
-                textarea#message(cols="40" rows="6" name='message') this is my message!
-            input(type="submit" value='Подать заявку')
-
+        .container-fluid
+            .row.top
+                .top__flex-container
+                    .item.item__double Блоки обучения
+                    .item.even АРТ
+                    .item.odd
+                    .item.even СПОРТ
+                    .item.odd
+                    .item.even STEM
+                    .item.odd
+                    .item.even ГУМАНИТАРНЫЙ БЛОК
+                    .item.odd
+                    .item.even IT
+                    .item.odd
+                    .item.even МЕДИА
+                    .item.odd
+                    .item.even PERFOMANCE
+                    .item.odd
+                    .item.even ПОЛИГЛОТ
+                    .item.odd
+                    .item.even БИЗНЕС
+                    .item.odd
+                    .item.even СОЦИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ
+            .row.middle
+                h3.middle__title 65%
+                p.middle__txt.
+                    сегодняшних учеников начальной школы будут работать в профессиях,
+                    которых еще не существует. Сейчас главная задача родителя – дать своему ребенку такое образование,
+                    которое поможет адаптироваться к вызовам будущего
+            .row.bottom
+                form(method="post" enctype="multipart/form-data" action="/")
+                    .form__left
+                        h2.bottom__left-title Подать Заявку
+                        p.bottom__left-txt.
+                            Заполните форму, чтобы записаться на консультацию – это первый шаг к
+                            зачислению
+                            в школу.
+                            Количество мест ограничено
+                    .form__middle
+                        label(for='name') Имя
+                        input(id="name" type="text" name="name" value="Andrii")
+                        label(for='tel') Телефон
+                        input(id="tel" type="tel" name="tel" value='0973958738')
+                        label(for='email') E-mail
+                        input(id="email" type="email" name="email" value='tokar.andrii@gmail.com')
+                    .form__right
+                        label(for='message') Сообщение
+                        textarea(id="message" cols="30" rows="10" name="message") this is some my message to you!!!
+                    .form__bottom
+                        input#submit(type="submit" value="ПОДАТЬ ЗАЯВКУ")
